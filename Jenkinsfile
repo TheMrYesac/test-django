@@ -20,7 +20,7 @@ pipeline{
       steps{
         powershell '''
         docker build -t test-django:cgray .
-        docker tag test-django 520320208152.dkr.ecr.us-east-2.amazonaws.com/test-django:cgray
+        docker tag test-django:cgray 520320208152.dkr.ecr.us-east-2.amazonaws.com/test-django:cgray
         '''
       }
     }
