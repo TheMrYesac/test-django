@@ -19,15 +19,15 @@ pipeline{
     stage('Build Docker Image'){
       steps{
         powershell '''
-        docker build -t test-django:django .
-        docker tag test-django 520320208152.dkr.ecr.us-east-2.amazonaws.com/test-django:django
+        docker build -t test-django:cgray .
+        docker tag test-django 520320208152.dkr.ecr.us-east-2.amazonaws.com/test-django:cgray
         '''
       }
     }
     stage('Push Image to ECR'){
       steps{
         powershell '''
-        docker push 520320208152.dkr.ecr.us-east-2.amazonaws.com/test-django:django
+        docker push 520320208152.dkr.ecr.us-east-2.amazonaws.com/test-django:cgray
         '''
       }
     }
