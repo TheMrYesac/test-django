@@ -1,8 +1,5 @@
 pipeline{
   agent any
-  environment{
-    VENV = 'venv'
-  }
   stages{
     stage('Checkout'){
       steps{
